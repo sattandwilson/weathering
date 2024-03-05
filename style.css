@@ -1,0 +1,276 @@
+* {
+  font-family: "cabin", sans-serif;
+}
+
+@keyframes opening {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes sunrise {
+  0% {
+    transform: scale(0.1);
+    left: -50%;
+  }
+  50% {
+    left: -25%;
+  }
+  100% {
+    left: 0%;
+    transform: scale(1);
+  }
+}
+@keyframes searchbox-theme {
+  0% {
+    transform: scale(1.5);
+  }
+  20% {
+    transform: scale(1.4);
+  }
+  40% {
+    transform: scale(1.3);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+body {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.img-container {
+  width: 100%;
+}
+#body-background {
+  width: 100%;
+  height: 50vw;
+  opacity: 0.8;
+  object-fit: cover;
+}
+
+.main-container {
+  width: 100%;
+  height: 99%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  animation: opening 1s linear;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-size: 4vw;
+  color: black;
+  font-weight: 500;
+}
+#search-box {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  margin: 1vw auto;
+  animation: searchbox-theme 1s linear;
+}
+#location {
+  width: 85%;
+  height: 2.5vw;
+  font-size: 1.2vw;
+  color: black;
+  background-color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 0 1vw;
+  cursor: pointer;
+  transition: 0.15s ease-in-out 0s;
+  /* position: relative; */
+}
+#location::-webkit-search-cancel-button {
+  position: relative;
+  right: 0;
+  cursor: pointer;
+}
+#location:hover {
+  box-shadow: rgb(83, 83, 83) 0px 0px 5px 1px;
+  transform: scale(1.005);
+}
+button {
+  width: 12%;
+  height: 100%;
+  background-color: rgb(83, 163, 255);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1vw;
+  font-weight: 500;
+  color: white;
+  transition: 0.15s ease-in-out;
+}
+button:hover {
+  box-shadow: rgb(117, 117, 117) 0px 0px 5px 1px;
+  transform: scale(1.02);
+  background-color: rgb(62, 152, 255);
+}
+button:active {
+  transform: scale(0.9);
+}
+#weather-logo {
+  width: 8%;
+  height: auto;
+  position: relative;
+}
+
+.sun-logo {
+  width: 60%;
+  height: auto;
+  float: right;
+  position: relative;
+  left: 0;
+  top: 0;
+  animation: sunrise 2s linear 0ms;
+}
+.cloud-logo {
+  width: 75%;
+  height: auto;
+  position: absolute;
+  z-index: 2;
+}
+
+h2 {
+  color: black;
+  font-size: 3vw;
+}
+#temp {
+  color: rgb(0, 0, 0);
+  font-size: 1.85vw;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 3vw;
+}
+
+.highlights {
+  width: 80%;
+  height: 12vw;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  margin: 2vw 0;
+  justify-items: left;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 1vw;
+  padding: 0 1vw;
+}
+.highlight-tags {
+  color: rgb(29, 29, 29);
+  font-size: 1.5vw;
+}
+
+@media screen and (max-width: 1025px) {
+  #body-background {
+    height: 150vw;
+    width: 100%;
+    object-fit: cover;
+  }
+  .main-container {
+    justify-content: space-around;
+  }
+  h1 {
+    font-size: 7vw;
+  }
+  #search-box {
+    width: 80%;
+  }
+  #location {
+    width: 85%;
+    height: 5.8vw;
+    font-size: 2.5vw;
+    border-radius: 15px;
+  }
+  button {
+    width: 13%;
+    border-radius: 15px;
+    font-size: 1.8vw;
+  }
+  #weather-logo {
+    width: 24%;
+  }
+  h2 {
+    font-size: 5.5vw;
+  }
+  #temp {
+    font-size: 3vw;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 3vw;
+  }
+  .highlights {
+    width: 80%;
+    height: 50%;
+    display: grid;
+    grid-template-columns: 100%;
+    margin: 2vw 0;
+    justify-items: left;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 2vw;
+    padding: 0 1vw;
+  }
+  .highlight-tags {
+    color: rgb(29, 29, 29);
+    font-size: 3vw;
+    margin-left: 4vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #body-background {
+    height: 150vw;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+@media screen and (max-width: 450px) {
+  #body-background {
+    height: 230vw;
+    width: 100%;
+    object-fit: cover;
+  }
+  #location {
+    width: 84%;
+    height: 7.6vw;
+    font-size: 2.8vw;
+    border-radius: 13px;
+  }
+  button {
+    width: 14%;
+    border-radius: 13px;
+    font-size: 2vw;
+  }
+}
+

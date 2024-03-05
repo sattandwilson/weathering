@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Satwik Wilson" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEATHERING</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="weather-icon.webp" type="image/x-icon" />
+  </head>
+  <body>
+    <img id="body-background" src="snowy scape.jpg" alt="background-image" />
+
+    <div class="main-container">
+      <h1>WEATHER APP</h1>
+      <div id="search-box">
+        <input
+          type="search"
+          name="location"
+          id="location"
+          placeholder="Enter a location here..."
+        />
+        <button>SEARCH</button>
+      </div>
+      <div id="weather-logo">
+        <img class="cloud-logo" src="cloud icon.png" alt="img" />
+        <img class="sun-logo" src="sunny logo.png" alt="img" />
+      </div>
+      <h2>STATUS</h2>
+      <p id="temp" class="tempar">TEMPERATURE</p>
+
+      <div class="highlights">
+        <div class="highlight-tags" id="now-date">Date:</div>
+        <div class="highlight-tags" id="time">
+          Time:
+          <span id="Hrs"></span>
+          <span>:</span>
+          <span id="Min"></span>
+          <span>:</span>
+          <span id="Sec"></span>
+        </div>
+        <div class="highlight-tags" id="location-info">Location:</div>
+        <div class="highlight-tags" id="sunrise-time">Sunrise:</div>
+        <div class="highlight-tags" id="humidity">Humidity:</div>
+        <div class="highlight-tags" id="visibility">Visibility:</div>
+        <div class="highlight-tags" id="sunset-time">Sunset:</div>
+        <div class="highlight-tags" id="wind-speed">Windspeed:</div>
+        <div class="highlight-tags" id="cloudiness">Cloudiness:</div>
+      </div>
+    </div>
+
+    <script src="weather.js"></script>
+  </body>
+</html>
